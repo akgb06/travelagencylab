@@ -4,22 +4,36 @@
  */
 package travelagency;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
+
 /**
  *
  * @author Joel
  */
 public class TravelAgency {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        TravelAgency ta = new TravelAgency(); // create a instance of travel agency
-        ta.run(); 
+        try {
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost/travelagency", "test", "password");
+            Statement stmt = (Statement) con.createStatement();
+        } catch (Exception e) {
+
+            TravelAgency ta = new TravelAgency(); // create an instance of travel agency
+            //ta.run(); 
+
+        }
     }
+
+}
+/**
+ * @param args the command line arguments
+ */
+
     
-    private void run() {
+   /* private void run() {
         TravelAgencyFrame taf = new TravelAgencyFrame("Travel Agency");
         taf.setVisible(true); // show the Jframe
     }
-}
+}*/
