@@ -13,27 +13,24 @@ import java.sql.Statement;
  * @author Joel
  */
 public class TravelAgency {
-
-    public static void main(String[] args) {
-        try {
+  public static void main(String[] args) {
+        try{
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost/travelagency", "test", "password");
             Statement stmt = (Statement) con.createStatement();
-        } catch (Exception e) {
-
-            TravelAgency ta = new TravelAgency(); // create an instance of travel agency
-            //ta.run(); 
-
+            String firstName = "";
+            String lastName = "";
+            String password = "";
+            String userName = "";
+        }catch(Exception e) {
+        TravelAgency ta = new TravelAgency(); // create an instance of travel agency
+        ta.run(); 
         }
-    }
-
-}
-/**
- * @param args the command line arguments
- */
-
-    
-   /* private void run() {
+  }
+  private void run() {
         TravelAgencyFrame taf = new TravelAgencyFrame("Travel Agency");
         taf.setVisible(true); // show the Jframe
     }
-}*/
+}  
+/**
+ * @param args the command line arguments
+ */
