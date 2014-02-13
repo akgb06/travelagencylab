@@ -5,16 +5,15 @@
 package travelagency;
 
 import java.awt.BorderLayout;
-import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.FlowLayout;
+import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
-import javax.swing.JTextArea;
 import javax.swing.JTextField;
-import javax.swing.plaf.basic.BasicArrowButton;
+import javax.swing.border.Border;
+import javax.swing.border.EtchedBorder;
 
 /**
  *
@@ -32,6 +31,7 @@ public class LogInPanel extends JPanel {
     JPasswordField password = new JPasswordField("******");
     JButton addAccount = new JButton("Add account");
     JButton logIn = new JButton("Log in");
+    Border loweredetched;
     
     public LogInPanel() {
         SetUpLogInPanel();
@@ -39,6 +39,11 @@ public class LogInPanel extends JPanel {
 
     private void SetUpLogInPanel() {
         setLayout(new BorderLayout());
+        loweredetched = BorderFactory.createEtchedBorder(EtchedBorder.LOWERED);
+        setBorder(loweredetched);
+        infoPanel.setBorder(loweredetched);
+        buttonPanel.setBorder(loweredetched);
+        fieldPanel.setBorder(loweredetched);
         infoPanel.add(info);
         add(infoPanel,BorderLayout.NORTH);
         buttonPanel.add(logIn);
