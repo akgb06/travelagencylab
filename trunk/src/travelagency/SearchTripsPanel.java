@@ -16,14 +16,14 @@ import javax.swing.JTextField;
  */
 public class SearchTripsPanel extends JPanel {
     
-    private JLabel text = new JLabel("add connection to a database with availabe trips to purchase");
+    private JLabel text = new JLabel("Search for a trip (All fields must be filled in)");
     JButton back = new JButton("Back to Menu");
     JLabel destinationLabel = new JLabel("Destination:");
-    JTextField destination = new JTextField("Berlin");
+    JTextField destination = new JTextField("berlin");
     JLabel dateLabel = new JLabel("Date:");
-    JTextField date = new JTextField("00/00/0000");
+    JTextField date = new JTextField("00/00/00");
     JLabel departureLabel = new JLabel("Departure:");
-    JTextField departure = new JTextField("Copenhagen");
+    JTextField departure = new JTextField("copenhagen");
     JButton searchTrips = new JButton("Search");
     
     public SearchTripsPanel() {

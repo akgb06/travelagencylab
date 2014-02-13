@@ -4,12 +4,11 @@
  */
 package travelagency;
 
-import java.awt.Color;
-import java.awt.FlowLayout;
-import java.awt.GridBagLayout;
-import java.awt.GridLayout;
+import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JPanel;
+import javax.swing.border.Border;
+import javax.swing.border.EtchedBorder;
 
 /**
  * This is the main panel. here the user can choose between two options
@@ -25,9 +24,12 @@ public class TravelAgencyStartPanel extends JPanel{
     JButton searchMyBookings = new JButton("Search my bookings");
     JButton searchTravels = new JButton("Search Trips");
     JButton logOut = new JButton("Log out");
+    Border loweredetched;
     
     public TravelAgencyStartPanel() {
         setSize(startPanelHeight, startPanelWidth);
+        loweredetched = BorderFactory.createEtchedBorder(EtchedBorder.LOWERED);
+        setBorder(loweredetched);
         addButtons();
     }
     
